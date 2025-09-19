@@ -22,6 +22,7 @@
     header h1 { font-size: 20px; margin: 0; color:#0b63ff; }
     header input, header button, header select { padding:12px 14px; border:1px solid #d1d5db; border-radius:10px; font-size:15px; }
     header button.primary { background:#0b63ff; color:white; border:none; cursor:pointer; }
+    header .homepage-btn { margin-left: auto; text-decoration: none; display: inline-block; padding: 10px 14px; border-radius: 10px; }
     #cy { width: 100%; height: 100%; }
     /* Floating button + popover for bi list near node */
     #bi-btn, #bi-popover { position:absolute; z-index:10; display:none; }
@@ -70,13 +71,9 @@
           <option value="1">k=1</option>
           <option value="2">k=2</option>
         </select>
-        <!-- <span class="legend">
-          <span>OUT → <span class="chip-out">blue</span></span>
-          <span class="sep">·</span>
-          <span>IN ← <span class="chip-in">green</span></span>
-        </span> -->
         <button id="reset">Reset</button>
         <button id="toggle-panel" title="Show/Hide node panel">Parameter list</button>
+        <a href="https://yourhomepage.com" target="_blank" class="primary homepage-btn">Homepage</a>
       </header>
       <div id="cy"></div>
     </div>
