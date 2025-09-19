@@ -63,8 +63,6 @@
     <div id="main" style="flex:1; display:flex; flex-direction:column; min-width:0;">
       <header>
         <h1>Graph Parameter Hierarchy</h1>
-        <input id="search" type="search" placeholder="Search parameter… (e.g., A->B)" />
-        <button id="fit" class="primary">Fit</button>
         <label for="edgeHL" style="margin-left:8px;">k-hierarchy</label>
         <select id="edgeHL">
           <option value="off" selected>Off</option>
@@ -752,15 +750,6 @@
       const label = currentNode.data('label');
       fillBiList(label);
       showPopoverNearButton();
-    });
-
-    // Simple search dimmer
-    document.getElementById('search').addEventListener('input', (e) => {
-      const raw = e.target.value.trim().toLowerCase();
-      cy.nodes().forEach(n => {
-        const match = (n.data('label') || '').toLowerCase().includes(raw);
-        n.style('opacity', raw ? (match ? 1 : 0.15) : 1);
-      });
     });
 
     cy.ready(() => { cy.fit(undefined, 40); });
